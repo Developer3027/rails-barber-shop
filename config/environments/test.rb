@@ -47,6 +47,10 @@ Rails.application.configure do
   # incoming request so you'll need to provide the :host parameter yourself.
   config.action_mailer.default_url_options = { host: "www.example.com" }
 
+  # Deprecation warning
+  # Opt in to Rails 8.1 behavior for "to_time" issue
+  config.active_support.to_time_preserves_timezone = :zone
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
